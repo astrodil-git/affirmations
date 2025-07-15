@@ -30,6 +30,12 @@ const reminderBubbles = [
     "You deserve a snack, cutie pie, you’re doing amazing."
 ];
 
+const welcomeScreen = document.getElementById('welcome-screen');
+const letsGoBtn = document.getElementById('lets-go-btn');
+const mainContent = document.getElementById('main-content');
+const encouragementWordElement = document.getElementById('encouragement-word');
+const newWordBtn = document.getElementById('new-word-btn');
+
 const confettiArea = document.getElementById('confetti-area');
 
 const contentFlow = ['pepTalk', 'loveNote', 'reminder'];
