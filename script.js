@@ -115,6 +115,8 @@ function displaySweetPepTalk() {
     feedbackArea.style.display = 'none';
     confettiArea.style.display = 'none';
     newWordBtn.style.display = 'block';
+    newWordBtn.textContent = ''; // Clear existing text
+    newWordBtn.classList.add('heart-button');
 }
 
 function displayLoveNote() {
@@ -125,6 +127,8 @@ function displayLoveNote() {
     feedbackArea.style.display = 'none';
     confettiArea.style.display = 'none';
     newWordBtn.style.display = 'block';
+    newWordBtn.textContent = ''; // Clear existing text
+    newWordBtn.classList.add('heart-button');
 }
 
 function displayReminderBubble() {
@@ -135,6 +139,8 @@ function displayReminderBubble() {
     feedbackArea.style.display = 'none';
     confettiArea.style.display = 'none';
     newWordBtn.style.display = 'block';
+    newWordBtn.textContent = ''; // Clear existing text
+    newWordBtn.classList.add('heart-button');
 }
 
 function displayQuiz() {
@@ -143,6 +149,7 @@ function displayQuiz() {
     feedbackArea.style.display = 'none';
     confettiArea.style.display = 'none';
     newWordBtn.style.display = 'none';
+    newWordBtn.classList.remove('heart-button'); // Remove heart class for quiz
 
     const randomIndex = Math.floor(Math.random() * pharmacyQuizzes.length);
     currentQuiz = pharmacyQuizzes[randomIndex];
@@ -170,6 +177,8 @@ function checkAnswer(event) {
         showConfetti();
         retryBtn.style.display = 'none';
         newWordBtn.style.display = 'block'; // Allow to proceed to next content
+        newWordBtn.textContent = ''; // Ensure heart button content
+        newWordBtn.classList.add('heart-button');
     } else {
         feedbackMessageElement.textContent = `Oops… but I still love you! The correct answer was ${currentQuiz.correctAnswer}.`;
         feedbackMessageElement.className = 'incorrect';

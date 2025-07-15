@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #FFC0CB, #FFFFFF, #90EE90); /* Pink, White, Light Green */
     color: #333;
 }
 
@@ -36,10 +36,19 @@ button {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block; /* Make button a block element */
+    margin: 20px auto; /* Center the button */
 }
 
 button:hover {
     background-color: #ffa500; /* Orange */
+}
+
+.heart-button::before {
+    content: "💖"; /* Unicode heart symbol */
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
 }
 
 .welcome-screen {
@@ -105,6 +114,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center; /* Center quiz option buttons */
 }
 
 #quiz-options button {
@@ -116,6 +126,8 @@ button:hover {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 80%; /* Adjust width to make them uniform and centered better */
+    max-width: 400px; /* Max width for readability */
 }
 
 #quiz-options button:hover {
@@ -127,6 +139,7 @@ button:hover {
     padding: 15px;
     border-radius: 8px;
     font-weight: bold;
+    text-align: center; /* Center retry button and feedback message */
 }
 
 #feedback-message.correct {
